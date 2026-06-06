@@ -388,6 +388,77 @@
     display: flex; align-items: center; justify-content: center; padding: 20px;
   }
   #login-overlay.hidden { display: none; }
+
+  /* ---- TOP 3 PODIUM ---- */
+  .podium-wrap { display:flex; gap:16px; align-items:flex-end; justify-content:center; padding:16px 0 8px; flex-wrap:wrap; }
+  .podium-col { text-align:center; min-width:130px; }
+  .podium-trophy { font-size:2rem; display:block; margin-bottom:4px; }
+  .podium-score-big { font-size:1.9rem; font-weight:800; line-height:1; }
+  .podium-sede-name { font-size:0.78rem; font-weight:700; margin-top:5px; color:var(--text); line-height:1.3; }
+  .podium-calls { font-size:0.68rem; color:var(--muted); margin-top:2px; }
+  .podium-plinth { border-radius:10px 10px 0 0; margin-top:8px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:900; color:white; padding:6px 0; }
+  .p1 .podium-plinth { background:linear-gradient(180deg,#FFD700,#F9A825); height:70px; }
+  .p2 .podium-plinth { background:linear-gradient(180deg,#BDBDBD,#757575); height:50px; }
+  .p3 .podium-plinth { background:linear-gradient(180deg,#FFAB40,#E65100); height:36px; }
+  .podium-col.mi-sede .podium-sede-name { color:#3F7A89; font-size:0.85rem; }
+  .mi-sede-tag { background:#3F7A89; color:white; font-size:0.62rem; padding:2px 8px; border-radius:20px; display:inline-block; margin-top:3px; font-weight:700; }
+  .posicion-msg { text-align:center; font-size:0.83rem; padding:6px 0 2px; color:var(--muted); font-weight:600; }
+
+  /* ---- PLAN DE ACCIÓN ---- */
+  .accion-list { display:flex; flex-direction:column; gap:9px; }
+  .accion-item { display:flex; gap:11px; align-items:flex-start; padding:11px 13px; border-radius:8px; border-left:4px solid; }
+  .accion-item.urgente  { background:#FFEBEE; border-color:#B71C1C; }
+  .accion-item.mejorar  { background:#FFF3E0; border-color:#E65100; }
+  .accion-item.mantener { background:#E8F5E9; border-color:#2E7D32; }
+  .accion-num { width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.72rem; font-weight:800; flex-shrink:0; color:white; margin-top:1px; }
+  .accion-item.urgente  .accion-num { background:#B71C1C; }
+  .accion-item.mejorar  .accion-num { background:#E65100; }
+  .accion-item.mantener .accion-num { background:#2E7D32; }
+  .accion-area { font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:2px; }
+  .accion-item.urgente  .accion-area { color:#B71C1C; }
+  .accion-item.mejorar  .accion-area { color:#E65100; }
+  .accion-item.mantener .accion-area { color:#2E7D32; }
+  .accion-texto { font-size:0.82rem; color:#333; line-height:1.5; }
+
+  /* ---- RECONOCIMIENTOS ---- */
+  .reconoc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media(max-width:600px){ .reconoc-grid { grid-template-columns:1fr; } }
+  .reconoc-item { background:linear-gradient(135deg,#E8F5E9,#F1F8E9); border-radius:10px; padding:14px 16px; border-left:4px solid #2E7D32; }
+  .reconoc-dim { font-size:0.7rem; text-transform:uppercase; font-weight:700; color:#2E7D32; letter-spacing:0.4px; }
+  .reconoc-val { font-size:1.8rem; font-weight:800; color:#2E7D32; line-height:1.1; }
+  .reconoc-desc { font-size:0.73rem; color:#555; margin-top:2px; }
+
+  /* ---- MI SEDE VS RED ---- */
+  .vsred-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #DADADA; }
+  .vsred-label { width:105px; font-size:0.8rem; font-weight:600; flex-shrink:0; }
+  .vsred-bar-wrap { flex:1; position:relative; height:18px; background:#F5F5F5; border-radius:9px; overflow:hidden; }
+  .vsred-bar-red  { position:absolute; height:100%; background:#DADADA; border-radius:9px; opacity:0.6; }
+  .vsred-bar-sede { position:absolute; height:100%; border-radius:9px; transition:width 0.8s; }
+  .vsred-vals { display:flex; gap:5px; align-items:center; flex-shrink:0; font-size:0.76rem; min-width:110px; }
+  .vsred-mine { font-weight:800; color:#3F7A89; }
+  .vsred-net  { color:var(--muted); }
+  .vsred-delta { font-size:0.7rem; font-weight:700; padding:1px 6px; border-radius:10px; }
+  .vsred-up   { background:#E8F5E9; color:#2E7D32; }
+  .vsred-down { background:#FFEBEE; color:#B71C1C; }
+  .vsred-eq   { background:#F5F5F5; color:#9E9E9E; }
+
+  /* ---- SEGUIMIENTO ---- */
+  .seg-table { width:100%; border-collapse:collapse; font-size:0.81rem; }
+  .seg-table th { background:#2D5967; color:white; padding:8px 12px; text-align:left; font-weight:600; white-space:nowrap; }
+  .seg-table td { padding:8px 12px; border-bottom:1px solid #DADADA; vertical-align:middle; }
+  .seg-table tr:hover td { background:#E8F2F5; }
+  .pil { display:inline-block; padding:2px 9px; border-radius:20px; font-size:0.69rem; font-weight:700; white-space:nowrap; }
+  .pil-inc { background:#FFEBEE; color:#B71C1C; }
+  .pil-crit{ background:#FFEBEE; color:#B71C1C; }
+  .pil-reg { background:#FFF3E0; color:#E65100; }
+  .pil-nc  { background:#E3F2FD; color:#1565C0; }
+  .accion-sug { font-size:0.73rem; color:var(--muted); font-style:italic; }
+
+  /* ---- QUEJAS FRECUENTES ---- */
+  .queja-nube { padding:6px 0 10px; }
+  .queja-tag { display:inline-block; padding:4px 12px; border-radius:20px; font-size:0.8rem; font-weight:600; background:#FFF3E0; color:#E65100; margin:3px; border:1px solid #FFCC80; cursor:default; }
+  .queja-tag.lg { font-size:1rem; padding:6px 16px; }
+  .queja-tag.sm { font-size:0.68rem; padding:2px 8px; opacity:0.8; }
   .login-card {
     background: white; border-radius: 20px; padding: 40px 44px;
     width: 100%; max-width: 420px;
@@ -498,6 +569,13 @@
   <!-- =================== VISTA GENERAL =================== -->
   <div class="view-general" id="view-general">
 
+    <!-- TOP 3 PODIUM — visible para todos -->
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-title"><span class="icon">🏆</span> Top 3 Sedes — Red Equilibrio Total</div>
+      <div id="podium-wrap" class="podium-wrap"></div>
+      <div id="posicion-msg" class="posicion-msg"></div>
+    </div>
+
     <!-- BIENVENIDA POR SEDE (visible solo si no es admin) -->
     <div class="sede-welcome" id="sede-welcome">
       <div class="nps-ring">
@@ -554,6 +632,36 @@
         <div class="card-title"><span class="icon">📋</span> Resumen por Sede</div>
         <div id="resumen-sede-tabla"></div>
       </div>
+    </div>
+
+    <!-- PLAN DE ACCIÓN + RECONOCIMIENTOS -->
+    <div class="grid-2" style="margin-bottom:24px">
+      <div class="card">
+        <div class="card-title"><span class="icon">🎯</span> Plan de Acción — Qué mejorar</div>
+        <div id="plan-accion" class="accion-list"></div>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="icon">🌟</span> Reconocimientos — Lo que haces bien</div>
+        <div id="reconocimientos" class="reconoc-grid"></div>
+      </div>
+    </div>
+
+    <!-- MI SEDE VS RED -->
+    <div class="card" id="card-vsred" style="display:none;margin-bottom:24px">
+      <div class="card-title"><span class="icon">📊</span> Mi Sede vs. Promedio de la Red</div>
+      <div id="vsred-content"></div>
+    </div>
+
+    <!-- SEGUIMIENTO PRIORITARIO -->
+    <div class="card" style="margin-bottom:24px">
+      <div class="card-title"><span class="icon">📞</span> Lista de Seguimiento Prioritario</div>
+      <div id="seguimiento-list" style="overflow-x:auto"></div>
+    </div>
+
+    <!-- QUEJAS FRECUENTES -->
+    <div class="card" style="margin-bottom:24px">
+      <div class="card-title"><span class="icon">💬</span> Temas más mencionados en observaciones negativas</div>
+      <div id="quejas-container"></div>
     </div>
 
     <!-- TENDENCIA EN EL TIEMPO -->
@@ -1516,6 +1624,12 @@ function renderGeneral() {
   hm += '</tbody></table>';
   document.getElementById('heatmap-dimensiones').innerHTML = hm;
 
+  renderPodium();
+  renderPlanAccion();
+  renderReconocimientos();
+  renderVsRed();
+  renderSeguimiento();
+  renderQuejas();
   generarAlertas();
 }
 
@@ -1705,6 +1819,211 @@ function generarAlertas() {
   if (!_alertasAbiertas && alertas.some(a => a.tipo === 'critico')) {
     toggleAlertas();
   }
+}
+
+// ============================================================
+// TOP 3 PODIUM
+// ============================================================
+function renderPodium() {
+  const sedes = [...new Set(_DATOS_ALL.map(d => d.sede))];
+  const ranking = sedes.map(s => {
+    const ac = _DATOS_ALL.filter(x => x.sede === s && x.score > 0);
+    return { sede: s, score: ac.length ? avg(ac.map(x => x.score)) : 0, n: ac.length };
+  }).filter(x => x.n >= 2).sort((a,b) => b.score - a.score);
+
+  const top3    = ranking.slice(0, 3);
+  const miSede  = SESSION?.sede;
+  const miPos   = ranking.findIndex(r => r.sede === miSede) + 1;
+  const trofeos = ['🥇','🥈','🥉'];
+  const cls     = ['p1','p2','p3'];
+  const orden   = [1, 0, 2]; // visual: plata, oro, bronce
+
+  let html = '';
+  orden.forEach(i => {
+    if (!top3[i]) return;
+    const esMia = top3[i].sede === miSede;
+    html += `<div class="podium-col ${cls[i]} ${esMia ? 'mi-sede' : ''}">
+      <div class="podium-score-big" style="color:${scoreColor(top3[i].score)}">${top3[i].score.toFixed(2)}</div>
+      <div class="podium-sede-name">${shortSede(top3[i].sede)}</div>
+      ${esMia ? '<div class="mi-sede-tag">⭐ Tu sede</div>' : ''}
+      <div class="podium-calls">${top3[i].n} llamadas calificadas</div>
+      <div class="podium-plinth ${cls[i]}">${trofeos[i]}</div>
+    </div>`;
+  });
+  document.getElementById('podium-wrap').innerHTML = html;
+
+  const msg = document.getElementById('posicion-msg');
+  if (SESSION?.role === 'sede' && miPos > 0) {
+    msg.innerHTML = miPos <= 3
+      ? `🎉 <strong>¡Tu sede está en el puesto #${miPos} de la red!</strong> ¡Sigue así!`
+      : `Tu sede ocupa el puesto <strong>#${miPos} de ${ranking.length}</strong>. ${miPos <= ranking.length/2 ? '¡Estás en la mitad superior! Empuja hacia el Top 3.' : 'Hay oportunidad de subir. Revisa tu plan de acción.'}`;
+  } else { msg.innerHTML = ''; }
+}
+
+// ============================================================
+// PLAN DE ACCIÓN AUTOMÁTICO
+// ============================================================
+function renderPlanAccion() {
+  const el = document.getElementById('plan-accion');
+  const activos = DATOS.filter(d => d.score > 0);
+  if (activos.length === 0) { el.innerHTML = '<div style="color:var(--muted);font-size:0.84rem;padding:8px">Sin datos suficientes.</div>'; return; }
+
+  const acciones = [];
+  const sc        = avg(activos.map(d => d.score));
+  const atencion  = avg(activos.map(d => d.atencion));
+  const instalac  = avg(activos.map(d => d.instalac));
+  const tiempos   = avg(activos.map(d => d.tiempos));
+  const resultado = avg(activos.map(d => d.resultado));
+  const noContacto = DATOS.filter(d => d.score === 0).length;
+  const pctNC     = DATOS.length > 0 ? noContacto / DATOS.length * 100 : 0;
+  const incidencias= DATOS.filter(d => d.observaciones && d.observaciones.toUpperCase().includes('INCIDENCIA')).length;
+  const criticos  = DATOS.filter(d => d.calificacion === 'Crítico' && d.score > 0).length;
+
+  if (incidencias > 0) acciones.push({ tipo:'urgente', area:'INCIDENCIAS REPORTADAS', texto:`${incidencias} incidencia(s) activa(s). Revisar de inmediato y contactar al paciente. Escalar al gerente regional si el caso no se resuelve en 24h.` });
+  if (criticos > 0) acciones.push({ tipo:'urgente', area:'PACIENTES CRÍTICOS', texto:`${criticos} paciente(s) con calificación crítica. Llamarlos hoy para conocer su situación y ofrecer solución. Documentar el resultado de la llamada.` });
+
+  const dimRules = [
+    { k:'tiempos',  v:tiempos,  l:'TIEMPOS DE ESPERA',     tip:'Revisar flujo de citas. Avisar al paciente cuando la espera supere 15 min. Agregar buffer entre consultas y sincronizar con recepción.' },
+    { k:'instalac', v:instalac, l:'INSTALACIONES',          tip:'Revisar limpieza, temperatura y orden del espacio. Retirar material clínico de áreas visibles para pacientes. Verificar sala de espera.' },
+    { k:'atencion', v:atencion, l:'ATENCIÓN DEL PERSONAL',  tip:'Reforzar: saludo al paciente por nombre, explicación del procedimiento antes de iniciar y despedida cordial. Revisar actitud del equipo de recepción.' },
+    { k:'resultado',v:resultado,l:'PERCEPCIÓN DE RESULTADOS',tip:'Establecer expectativas realistas desde la primera consulta. Explicar que los resultados son progresivos. Dar seguimiento activo entre sesiones.' },
+  ];
+  dimRules.sort((a,b) => a.v - b.v).forEach(d => {
+    if (d.v < 4.2) acciones.push({ tipo: d.v < 3.0 ? 'urgente' : 'mejorar', area: d.l, texto: `Score actual ${d.v.toFixed(1)}/5 — ${d.tip}` });
+  });
+
+  if (pctNC >= 40) acciones.push({ tipo:'mejorar', area:'TASA DE CONTACTO ('+pctNC.toFixed(0)+'% sin respuesta)', texto:'Enviar WhatsApp previo avisando que se les llamará. Probar horarios 10am-12pm y 4pm-6pm. Verificar números al momento de la atención.' });
+
+  if (acciones.length === 0) acciones.push({ tipo:'mantener', area:'EXCELENTE TRABAJO', texto:`Score global ${sc.toFixed(2)}/5. Todos los indicadores están en buen nivel. Mantén los estándares y comparte las buenas prácticas con otras sedes.` });
+
+  el.innerHTML = acciones.map((a,i) => `
+    <div class="accion-item ${a.tipo}">
+      <div class="accion-num">${i+1}</div>
+      <div><div class="accion-area">${a.area}</div><div class="accion-texto">${a.texto}</div></div>
+    </div>`).join('');
+}
+
+// ============================================================
+// RECONOCIMIENTOS
+// ============================================================
+function renderReconocimientos() {
+  const el = document.getElementById('reconocimientos');
+  const activos = DATOS.filter(d => d.score > 0);
+  if (activos.length === 0) { el.innerHTML = '<div style="color:var(--muted);font-size:0.84rem">Sin datos.</div>'; return; }
+
+  const dims = [
+    { k:'atencion',  l:'Atención del personal',   icon:'👨‍⚕️' },
+    { k:'instalac',  l:'Instalaciones y limpieza', icon:'🏥' },
+    { k:'tiempos',   l:'Tiempos de espera',        icon:'⏱️' },
+    { k:'resultado', l:'Resultados percibidos',    icon:'💊' },
+  ];
+  const scored = dims.map(d => ({ ...d, v: avg(activos.map(x => x[d.k])) })).sort((a,b) => b.v - a.v);
+  const top = scored.filter(d => d.v >= 3.8).slice(0, 4);
+
+  if (top.length === 0) { el.innerHTML = '<div style="color:var(--muted);font-size:0.84rem;padding:8px">Aún no hay dimensiones destacadas (≥3.8). ¡Aplica el plan de acción!</div>'; return; }
+  el.innerHTML = top.map(d => `
+    <div class="reconoc-item">
+      <div class="reconoc-dim">${d.icon} ${d.l}</div>
+      <div class="reconoc-val">${d.v.toFixed(1)}<span style="font-size:0.95rem;font-weight:400">/5</span></div>
+      <div class="reconoc-desc">Tus pacientes valoran especialmente esta área</div>
+    </div>`).join('');
+}
+
+// ============================================================
+// MI SEDE VS RED
+// ============================================================
+function renderVsRed() {
+  const card = document.getElementById('card-vsred');
+  if (!SESSION || SESSION.role !== 'sede') { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+
+  const miAc  = DATOS.filter(d => d.score > 0);
+  const redAc = _DATOS_ALL.filter(d => d.score > 0);
+  const dims  = [
+    { k:'atencion',  l:'Atención' },
+    { k:'instalac',  l:'Instalaciones' },
+    { k:'tiempos',   l:'Tiempos' },
+    { k:'resultado', l:'Resultados' },
+    { k:'score',     l:'Score Global' },
+  ];
+  document.getElementById('vsred-content').innerHTML = dims.map(dim => {
+    const mine = avg(miAc.map(x => x[dim.k]));
+    const red  = avg(redAc.map(x => x[dim.k]));
+    const delta = mine - red;
+    const dc = delta > 0.1 ? 'vsred-up' : delta < -0.1 ? 'vsred-down' : 'vsred-eq';
+    const ds = delta > 0 ? '+' : '';
+    return `<div class="vsred-row">
+      <div class="vsred-label">${dim.l}</div>
+      <div class="vsred-bar-wrap">
+        <div class="vsred-bar-red"  style="width:${(red/5*100).toFixed(0)}%"></div>
+        <div class="vsred-bar-sede" style="width:${(mine/5*100).toFixed(0)}%;background:${scoreColor(mine)}"></div>
+      </div>
+      <div class="vsred-vals">
+        <span class="vsred-mine">${mine.toFixed(2)}</span>
+        <span class="vsred-net">red: ${red.toFixed(2)}</span>
+        <span class="vsred-delta ${dc}">${ds}${delta.toFixed(2)}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ============================================================
+// SEGUIMIENTO PRIORITARIO
+// ============================================================
+function renderSeguimiento() {
+  const prioridad = d => {
+    if (d.observaciones && d.observaciones.toUpperCase().includes('INCIDENCIA')) return 0;
+    if (d.calificacion === 'Crítico' && d.score > 0) return 1;
+    if (d.calificacion === 'Regular') return 2;
+    if (d.score === 0 && d.paciente) return 3;
+    return 99;
+  };
+  const pInfo = {
+    0: { cls:'pil-inc',  lbl:'🚨 Incidencia',   acc:'Escalar hoy — contacto inmediato' },
+    1: { cls:'pil-crit', lbl:'🔴 Crítico',       acc:'Llamada de recuperación — 24h' },
+    2: { cls:'pil-reg',  lbl:'🟠 Regular',        acc:'Seguimiento esta semana' },
+    3: { cls:'pil-nc',   lbl:'📵 Sin contacto',   acc:'Reintentar llamada — verificar número' },
+  };
+  const lista = DATOS.filter(d => prioridad(d) <= 3).sort((a,b) => prioridad(a)-prioridad(b)).slice(0,25);
+  const el = document.getElementById('seguimiento-list');
+  if (lista.length === 0) { el.innerHTML='<div style="color:#2E7D32;text-align:center;padding:18px;font-size:0.85rem">✅ Sin pacientes pendientes de seguimiento</div>'; return; }
+
+  el.innerHTML = `<table class="seg-table"><thead><tr>
+    <th>Paciente</th><th>Teléfono</th><th>Sede</th><th>Fecha</th><th>Prioridad</th><th>Acción sugerida</th>
+  </tr></thead><tbody>` +
+  lista.map(d => {
+    const p = prioridad(d); const pi = pInfo[p] || pInfo[3];
+    return `<tr>
+      <td><strong>${d.paciente||'—'}</strong></td>
+      <td style="font-size:0.78rem">${d.telefono||'—'}</td>
+      <td style="font-size:0.75rem">${shortSede(d.sede)}</td>
+      <td style="font-size:0.75rem">${d.fecha_llamada}</td>
+      <td><span class="pil ${pi.cls}">${pi.lbl}</span></td>
+      <td class="accion-sug">${pi.acc}</td>
+    </tr>`;
+  }).join('') + '</tbody></table>';
+}
+
+// ============================================================
+// QUEJAS FRECUENTES
+// ============================================================
+function renderQuejas() {
+  const el = document.getElementById('quejas-container');
+  const negativos = DATOS.filter(d => (d.calificacion==='Regular'||d.calificacion==='Crítico'||d.score===0) && d.observaciones && d.observaciones.length > 5);
+  if (negativos.length === 0) { el.innerHTML='<div style="color:#2E7D32;font-size:0.84rem;padding:8px">✅ Sin observaciones negativas destacadas.</div>'; return; }
+
+  const texto = negativos.map(d => d.observaciones.toLowerCase()).join(' ');
+  const stop  = new Set(['para','como','pero','fue','son','con','una','por','del','los','las','sin','más','que','este','esta','sus','les','nos','hay','también','solo','muy','bien','todo','toda','tuvo','pues','algo','hace','hace','dice','dijo','está','esti','ellos','ella','usted','desde','donde','cuando','aunque','porque','entre','cada','otro','otra','tanto','tiene','habia']);
+  const freq  = {};
+  texto.split(/[\s,\.;:¿?¡!()"'\-\/\\]+/).forEach(w => {
+    if (w.length >= 4 && !stop.has(w) && !/^\d+$/.test(w)) freq[w] = (freq[w]||0)+1;
+  });
+  const top = Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,20);
+  if (top.length === 0) { el.innerHTML='<div style="color:var(--muted);font-size:0.84rem">Sin palabras clave encontradas.</div>'; return; }
+  const maxF = top[0][1];
+  el.innerHTML = '<div class="queja-nube">' +
+    top.map(([p,n]) => `<span class="queja-tag ${n>=maxF*.7?'lg':n<=1?'sm':''}" title="${n} menciones">${p} <strong>(${n})</strong></span>`).join('') +
+    '</div><div style="font-size:0.73rem;color:var(--muted);margin-top:4px">Palabras más frecuentes en observaciones negativas o sin contacto</div>';
 }
 
 // ============================================================
