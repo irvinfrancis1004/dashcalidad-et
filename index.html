@@ -1488,7 +1488,7 @@ function renderGeneral() {
   }
 
   // ── HEATMAP DE DIMENSIONES POR SEDE ──
-  const dims = [
+  const hmDims = [
     { key:'atencion',  lbl:'Atención' },
     { key:'instalac',  lbl:'Instalac.' },
     { key:'tiempos',   lbl:'Tiempos' },
@@ -1496,7 +1496,7 @@ function renderGeneral() {
   ];
   let hm = `<table class="heatmap-table"><thead><tr>
     <th>Sede</th>
-    ${dims.map(d=>`<th>${d.lbl}</th>`).join('')}
+    ${hmDims.map(d=>`<th>${d.lbl}</th>`).join('')}
     <th>Score</th><th>Contacto</th>
   </tr></thead><tbody>`;
   sedes.forEach(s => {
@@ -1505,7 +1505,7 @@ function renderGeneral() {
     const sc = avg(ac.map(x => x.score));
     const tc = d.length > 0 ? (ac.length/d.length*100) : 0;
     hm += `<tr><td>${shortSede(s)}</td>`;
-    dims.forEach(dim => {
+    hmDims.forEach(dim => {
       const v = avg(ac.map(x => x[dim.key]));
       hm += `<td class="${semClass(v)}">${v > 0 ? v.toFixed(1) : '—'}</td>`;
     });
